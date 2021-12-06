@@ -6,8 +6,10 @@ module.exports = withSass({
   cssModules: true,
 });
 module.exports = {
-  /* Add Your Scss File Folder Path Here */
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
+  },
+  images: {
+    domains: ["dummyimage.com"],
   },
 };

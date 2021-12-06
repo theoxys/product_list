@@ -1,0 +1,62 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.product-container {
+  display: grid;
+  grid-template:
+    "thumb name button"
+    "thumb price button"/ 150px 3fr 150px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1024px;
+  border: 1px solid #999999;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  span {
+    grid-area: thumb;
+  }
+  h1 {
+    grid-area: name;
+    margin-left: 20px;
+  }
+  h2 {
+    grid-area: price;
+    margin-left: 20px;
+  }
+  button {
+    grid-area: button;
+    max-width: 150px;
+    height: 40px;
+    background-color: #91d568;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    border: 1px solid #999999;
+    cursor: pointer;
+  }
+}
