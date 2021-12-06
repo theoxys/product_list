@@ -6,6 +6,35 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+$color-primary: #91d568;
+$color-primary-hover: #80c05c;
+$color-text: #999999;
+
+.btn {
+  max-width: 150px;
+  height: 40px;
+  background-color: $color-primary;
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  border: 1px solid $color-text;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+}
+
 .main-content {
   display: flex;
   align-items: center;
@@ -16,15 +45,6 @@ body {
   padding: 20px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 .product-container {
   display: grid;
   grid-template:
@@ -33,16 +53,18 @@ a {
   padding: 20px;
   width: 100%;
   max-width: 1024px;
-  border: 1px solid #999999;
+  border: 1px solid $color-text;
   border-radius: 10px;
   margin-bottom: 10px;
-
+  align-items: center;
   span {
     grid-area: thumb;
   }
   h1 {
     grid-area: name;
     margin-left: 20px;
+    font-weight: 300;
+    color: $color-text;
   }
   h2 {
     grid-area: price;
@@ -50,13 +72,5 @@ a {
   }
   button {
     grid-area: button;
-    max-width: 150px;
-    height: 40px;
-    background-color: #91d568;
-    border-radius: 10px;
-    color: #fff;
-    outline: none;
-    border: 1px solid #999999;
-    cursor: pointer;
   }
 }

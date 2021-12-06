@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.scss";
 import { GetStaticProps } from "next";
 import { api } from "../services/api";
 import { Product } from "../interfaces/product";
@@ -33,7 +32,7 @@ const Home: NextPage = ({ products }: any) => {
             />
             <h1 className="p-name">{product.Name}</h1>
             <h2 className="p-price">{product.Price}</h2>
-            <button className="p-button">View Details</button>
+            <button className="btn">View Details</button>
           </div>
         ))}
       </main>

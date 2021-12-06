@@ -7,7 +7,7 @@ module.exports = withSass({
 });
 module.exports = {
   sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
+    includePaths: [path.join(__dirname, "src/styles")],
   },
   images: {
     domains: ["dummyimage.com"],
