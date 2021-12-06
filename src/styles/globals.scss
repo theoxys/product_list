@@ -17,6 +17,24 @@ a {
   box-sizing: border-box;
 }
 
+.Toastify__toast-container {
+  top: 0 !important;
+  width: 100% !important;
+
+  .Toastify__toast {
+    background-color: #91d568cc !important;
+  }
+  .Toastify__toast-body {
+    div {
+      display: flex;
+      justify-content: center;
+      color: #fff !important;
+      font-size: 24px !important;
+      font-weight: bold !important;
+    }
+  }
+}
+
 $color-primary: #91d568;
 $color-primary-hover: #80c05c;
 $color-text: #5b5b5b;

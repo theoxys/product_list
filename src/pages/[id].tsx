@@ -7,11 +7,25 @@ import { Product } from "../interfaces/product";
 import { Price } from "../components/Price";
 import Rating from "react-rating";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { toast, Slide } from "react-toastify";
 interface PageProps {
   product: Product;
 }
 
 const Product: NextPage<PageProps> = ({ product }) => {
+  const handleShowToast = () => {
+    toast("Product added successfully!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      transition: Slide,
+    });
+  };
+
   return (
     <div>
       <Head>
@@ -47,7 +61,9 @@ const Product: NextPage<PageProps> = ({ product }) => {
                 ? `In stock: ${product.Stock}`
                 : "Out Of Stock"}
             </span>
-            <button className="btn">Add to Cart</button>
+            <button className="btn" onClick={handleShowToast}>
+              Add to Cart
+            </button>
           </div>
         </div>
       </main>
