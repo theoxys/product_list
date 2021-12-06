@@ -5,7 +5,8 @@ import { GetServerSideProps } from "next";
 import { api } from "../services/api";
 import { Product } from "../interfaces/product";
 import { Price } from "../components/Price";
-
+import Rating from "react-rating";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 interface PageProps {
   product: Product;
 }
@@ -19,15 +20,23 @@ const Product: NextPage<PageProps> = ({ product }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="detail-container">
-        <Image
-          src={product.PictureURL}
-          alt={product.Name}
-          width={300}
-          height={300}
-          className="detail-image"
-        />
+        <div className="detail-image">
+          <Image
+            src={product.PictureURL}
+            alt={product.Name}
+            width={350}
+            height={350}
+          />
+        </div>
         <section>
           <h1>{product.Name}</h1>
+          <Rating
+            fractions={2}
+            initialRating={product.RatingAvg}
+            readonly
+            emptySymbol={<AiOutlineStar />}
+            fullSymbol={<AiFillStar />}
+          />
           <p>{product.Description}</p>
         </section>
         <div className="price-column">

@@ -65,6 +65,11 @@ $color-text: #5b5b5b;
     }
   }
 
+  .detail-image {
+    min-width: 350px;
+    min-height: 350px;
+  }
+
   .price-column {
     display: flex;
     flex-direction: column;
@@ -74,11 +79,6 @@ $color-text: #5b5b5b;
     button {
       width: 100%;
     }
-  }
-
-  span {
-    min-width: 350px !important;
-    min-height: 350px !important;
   }
 }
 
