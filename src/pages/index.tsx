@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 import { api } from "../services/api";
 import { Product } from "../interfaces/product";
 import { useEffect, useState } from "react";
+import { Price } from "../components/Price";
 
 const Home: NextPage = ({ products }: any) => {
   const [productList, setProductList] = useState([] as Product[]);
@@ -31,7 +32,7 @@ const Home: NextPage = ({ products }: any) => {
               className="p-thumb"
             />
             <h1 className="p-name">{product.Name}</h1>
-            <h2 className="p-price">{product.Price}</h2>
+            <Price price={product.Price} retailPrice={product.RetailPrice} />
             <button className="btn">View Details</button>
           </div>
         ))}

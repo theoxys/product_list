@@ -6,12 +6,16 @@ interface PriceData {
 
 export const Price = ({ price, retailPrice }: PriceData) => {
   if (price === retailPrice) {
-    return <h2>{price}</h2>;
+    return (
+      <div className="price-tag">
+        <h2>${price}</h2>
+      </div>
+    );
   } else {
     return (
-      <div>
-        <h2>{retailPrice}</h2>
-        <s>{price}</s>
+      <div className="price-tag">
+        <h2>${retailPrice}</h2>
+        <s>${price}</s>
       </div>
     );
   }
