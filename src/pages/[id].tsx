@@ -4,7 +4,7 @@ import Image from "next/image";
 import { GetServerSideProps } from "next";
 import { api } from "../services/api";
 import { Product } from "../interfaces/product";
-import Price from "../components/Price";
+import Price from "../components/price";
 import Rating from "react-rating";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { toast, Slide } from "react-toastify";
