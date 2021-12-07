@@ -1,5 +1,6 @@
 import React from "react";
-interface PriceData {
+
+export interface PriceData {
   price: number;
   retailPrice: number;
 }

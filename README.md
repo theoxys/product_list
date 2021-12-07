@@ -7,7 +7,14 @@ A linguagem escolhida foi o Typescript e para estilização foi utilizado sass.
 
 ## Quickstart
 
-Para rodar o projeto basta clonar o repositório e instalar os pacotes utilizando `yarn` ou `npm` e depois executar em modo de desenvolvimento utilizando o comando
+Para rodar o projeto basta clonar o repositório e instalar os pacotes utilizando `yarn` ou `npm`
+é necessário criar o arquivo de variavel de ambiente `.env` apontando pra URL base da API, no caso para rodar local basta usar a seguinte variavel
+
+```
+API_BASE_URL=http://localhost:3000/api/
+```
+
+e depois executar em modo de desenvolvimento utilizando o comando
 
 ```
 $ yarn dev
