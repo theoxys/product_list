@@ -4,7 +4,7 @@ interface PriceData {
   retailPrice: number;
 }
 
-export const Price = ({ price, retailPrice }: PriceData) => {
+const Price = ({ price, retailPrice }: PriceData) => {
   if (price === retailPrice) {
     return (
       <div className="price-tag">
@@ -20,3 +20,5 @@ export const Price = ({ price, retailPrice }: PriceData) => {
     );
   }
 };
+
+export default Price;

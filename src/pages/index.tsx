@@ -5,7 +5,7 @@ import { GetServerSideProps } from "next";
 import { api } from "../services/api";
 import { Product } from "../interfaces/product";
 import { useEffect, useState } from "react";
-import { Price } from "../components/Price";
+import Price from "../components/Price";
 import Router from "next/router";
 
 const Home: NextPage = ({ products }: any) => {
