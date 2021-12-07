@@ -16,7 +16,7 @@ const Product: NextPage<PageProps> = ({ product }) => {
   const handleShowToast = () => {
     toast("Product added successfully!", {
       position: "top-center",
-      autoClose: 5000,
+      autoClose: 2000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,

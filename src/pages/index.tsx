@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import { api } from "../services/api";
 import { Product } from "../interfaces/product";
 import { useEffect, useState } from "react";
@@ -46,7 +46,7 @@ const Home: NextPage = ({ products }: any) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const response = await api.get("products");
 
   const productList = response.data;
